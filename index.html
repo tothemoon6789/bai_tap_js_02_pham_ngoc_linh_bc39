@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Bai tap JS1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="./css/index.css">
+  </head>
+  <body>
+    <div class="box">
+        <h2>Bài 1: Tính tiền lương nhân viên</h2>
+        <p>Công thức: lương 1 ngày 100.000 nhân với số ngày làm.</p>
+        <input id="workDay" type="number" placeholder="Nhập số ngày làm"> x 100.000đ = <p id="result01" style="display:inline-block;font-weight: bold;">đ0</p><br>
+        <button id="button01">Kết quả</button>
+    </div>
+    <div class="box">
+        <h2>Bài 2: Tính giá trị trung bình</h2>
+        <p>Giá trị trung bình của 5 số</p>
+        <input type="number" placeholder="Nhập số thực thứ 1" id="numberInput1"><br>
+        <input type="number" placeholder="Nhập số thực thứ 2" id="numberInput2"><br>
+        <input type="number" placeholder="Nhập số thực thứ 3" id="numberInput3"><br>
+        <input type="number" placeholder="Nhập số thực thứ 4" id="numberInput4"><br>
+        <input type="number" placeholder="Nhập số thực thứ 5" id="numberInput5"><br>
+        <p id="numberAnswer" style="font-weight: bold;">Kết quả: 0</p>
+        <button id="numberBtn">Tính trung bình</button>
+
+    </div>
+    <div class="box">
+        <h2>Bài 3: Quy đổi tiền</h2>
+        <input type="number" id="usdInput" placeholder="Nhập số USD vào"> USD x 23.500 VND/USD = <p style="display: inline-block;font-weight: bold;" id="usdAnswer">0 VND</p><br>
+        <button id="usdBtn">Quy đổi</button>
+    </div>
+    <div class="box">
+      <h2>Bài 4: Tính diện tích, chu vi hình chữ nhật.</h2>
+      <input type="number" placeholder="Nhập chiều rộng" id="rectWidth">
+      <input type="number" placeholder="Nhập chiều dài" id="rectHeight">
+      <p id="rectAnswer" style="font-weight:bold;">0</p>
+      <button id="rectBtn">Tính diện tích</button>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- MAIN JS -->
+    <script src="./main.js"></script>
+  </body>
+</html>
