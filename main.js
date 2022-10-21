@@ -26,14 +26,14 @@ var workDay = 0; // working day.
 var totalSalary = 0; // total working day;
 var eInput = document.getElementById("workDay");// Element input
 var eOutPut = document.getElementById("result01"); // Element in ket qua
- 
+
 
 //  * ======End Input===
-function getInfoFromInput(){
+function getInfoFromInput() {
     workDay = eInput.value; // Get value from input
     workDay = parseInt(workDay); //parse number from string
 }
-function money(someNumber){
+function money(someNumber) {
     return new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'VND' }).format(someNumber);
 }
 //  * ======Handle======
@@ -61,11 +61,11 @@ document.getElementById("button01").addEventListener("click", () => {
 //  * ======Input=======
 const totalInput = 5; // total input element
 var total = 0; // total of 5 value input element
-var NUMBER_1 = 0 ; // number 1
-var NUMBER_2 = 0 ; // number 2
-var NUMBER_3 = 0 ; // number 3
-var NUMBER_4 = 0 ; // number 4
-var NUMBER_5 = 0 ; // number 5
+var NUMBER_1 = 0; // number 1
+var NUMBER_2 = 0; // number 2
+var NUMBER_3 = 0; // number 3
+var NUMBER_4 = 0; // number 4
+var NUMBER_5 = 0; // number 5
 var numberInput1 = document.getElementById("numberInput1"); // find ID of Element input number 1
 var numberInput2 = document.getElementById("numberInput2"); // find ID of Element input number 2
 var numberInput3 = document.getElementById("numberInput3"); // find ID of Element input number 3
@@ -77,35 +77,35 @@ var numberBtn = document.getElementById("numberBtn");//find ID Element button
 //  * ======End Input===
 
 //  * ======Handle======
-function average(){
+function average() {
     // window.alert("hi");
-    if(numberInput1.value1 != "" && numberInput2.value != "" && numberInput3.value != "" && numberInput4.value != "" && numberInput5.value != ""){
+    if (numberInput1.value1 != "" && numberInput2.value != "" && numberInput3.value != "" && numberInput4.value != "" && numberInput5.value != "") {
         NUMBER_1 = parseInt(numberInput1.value);
         NUMBER_2 = parseInt(numberInput2.value);
         NUMBER_3 = parseInt(numberInput3.value);
         NUMBER_4 = parseInt(numberInput4.value);
         NUMBER_5 = parseInt(numberInput5.value);
-        total = NUMBER_1 +NUMBER_2 +NUMBER_3 +NUMBER_4 +NUMBER_5;
-        return  total /totalInput;
+        total = NUMBER_1 + NUMBER_2 + NUMBER_3 + NUMBER_4 + NUMBER_5;
+        return total / totalInput;
 
     }
-    
-    else    {
-       window.alert("Nhập dữ liệu vào ô !");
-       return total;
+
+    else {
+        window.alert("Nhập dữ liệu vào ô !");
+        return total;
     }
-    
+
 }
 //  * ======End Handle==
 
 //  * ======Output======
-numberBtn.onclick = function (){
-    if(average()===NaN){
+numberBtn.onclick = function () {
+    if (average() === NaN) {
 
         numberAnswer.innerHTML = "Hãy nhập dữ liệu !";
-    }else {
-        numberAnswer.innerHTML ="Kết quả = "+ average();
-        
+    } else {
+        numberAnswer.innerHTML = "Kết quả = " + average();
+
     }
 }
 //  * ======End Ouput===
@@ -117,18 +117,18 @@ numberBtn.onclick = function (){
 //  * Mô hình 3 khối
 //  * ======Input=======
 const vndPerUsd = 23500; //VND per USD
-var usdCalculate = 0 ; // Change money number after calculate
+var usdCalculate = 0; // Change money number after calculate
 var usdInput = document.getElementById("usdInput");// find id input
 var usdAnswer = document.getElementById("usdAnswer");// find id answer place
 var usdBtn = document.getElementById("usdBtn"); // find id button place
 //  * ======End Input===
 
 //  * ======Handle======
-function usdChange (){
+function usdChange() {
 
-    if(usdInput.value != ""){
+    if (usdInput.value != "") {
         usdCalculate = parseInt(usdInput.value);
-        
+
     } else {
         window.alert("Nhập dữ liệu vào ô!")
     }
@@ -136,11 +136,11 @@ function usdChange (){
 //  * ======End Handle==
 
 //  * ======Output======
-usdBtn.addEventListener("click",() => {
-    if(usdChange()!=NaN){
-        usdAnswer.innerHTML = money(usdCalculate*vndPerUsd);
+usdBtn.addEventListener("click", () => {
+    if (usdChange() != NaN) {
+        usdAnswer.innerHTML = money(usdCalculate * vndPerUsd);
     }
-    
+
 
 })
 //  * ======End Ouput===
@@ -164,13 +164,13 @@ var rectEBtn = document.getElementById("rectBtn");
 var rectEAnwser = document.getElementById("rectAnswer");
 ;
 //  * ======End Input===
-function findSquare(){
-    
-    if(rectEWidth.value!="" && rectEHeight.value !=""){
+function findSquare() {
+
+    if (rectEWidth.value != "" && rectEHeight.value != "") {
         rectWidth = parseInt(rectEWidth.value);
         rectHeight = parseInt(rectEHeight.value);
-        rectSquare = rectHeight*rectWidth;
-        rectPerimeter = (rectWidth + rectHeight)*2;
+        rectSquare = rectHeight * rectWidth;
+        rectPerimeter = (rectWidth + rectHeight) * 2;
     } else {
         window.alert("Nhập dữ liệu vào ô!")
     }
@@ -181,7 +181,37 @@ function findSquare(){
 //  * ======Output======
 rectEBtn.onclick = () => {
     findSquare()
-    rectEAnwser.innerHTML ="DIỆN TÍCH = "+ rectSquare +"<br>"+ "CHU VI = "+ rectPerimeter;
+    rectEAnwser.innerHTML = "DIỆN TÍCH = " + rectSquare + "<br>" + "CHU VI = " + rectPerimeter;
 }
 
 //  * ======End Ouput===
+/**
+ * BAI 5: TINH TONG 2 KY SO
+ */
+//  * Mô hình 3 khối
+document.getElementById("sumBtn").addEventListener("click", () => {
+    //  * ======Input=======
+    var myNumber = document.getElementById("sumInput").value;
+    if (myNumber.toString().length === 2) {
+        var myTens;
+        var myUnits;
+        var myTotal;
+        //  * ======End Input===
+
+        //  * ======Handle======
+        myTens = Math.floor(myNumber / 10);
+        myUnits = myNumber % 10;
+        myTotal = myTens + myUnits;
+        //  * ======End Handle==
+        //  * ======Output======
+
+        document.getElementById("sumAnswer").innerHTML = myTotal;
+
+    } else {
+        alert("Phải nhập số có 2 chữ số");
+    }
+    //  * ======End Ouput===
+
+})
+
+
